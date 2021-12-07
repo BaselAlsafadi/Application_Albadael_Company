@@ -13,13 +13,13 @@ class General {
   String linkedin;
   String footer;
   String gmaps;
-  Null tawkto;
-  Null disqus;
+  String? tawkto;
+  String? disqus;
   String gverification;
-  Null sharethis;
+  String? sharethis;
   String keyword;
   String metaDesc;
-  Null createdAt;
+  String? createdAt;
   String updatedAt;
 
   General(

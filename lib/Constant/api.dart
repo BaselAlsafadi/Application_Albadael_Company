@@ -1,5 +1,6 @@
 class API {
-  String publicAPI = 'http://badaelonline.com/backend/public/';
-  String teamAPI = 'http://badaelonline.com/backend/public/about-us/';
-  String localstorgeAPI = 'http://badaelonline.com/backend/public/storage/';
+  static const String baseUrl = 'http://badaelonline.com/backend/public';
+  static const String publicAPI = '$baseUrl';
+  static const String teamAPI = '$baseUrl/about-us/';
+  static const String localstorgeAPI = '$baseUrl/storage/';
 }

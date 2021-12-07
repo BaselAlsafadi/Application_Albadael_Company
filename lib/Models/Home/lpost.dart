@@ -12,7 +12,7 @@ class Lpost {
   String status;
   String createdAt;
   String updatedAt;
-  Null deletedAt;
+  String? deletedAt;
 
   Lpost(
       {required this.id,

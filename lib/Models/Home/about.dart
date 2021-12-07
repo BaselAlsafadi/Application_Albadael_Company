@@ -3,7 +3,7 @@ class About {
   String title;
   String subject;
   String desc;
-  Null createdAt;
+  String? createdAt;
   String updatedAt;
 
   About(

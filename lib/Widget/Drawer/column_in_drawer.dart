@@ -1,10 +1,9 @@
-import 'package:albadael/Screens/About.dart';
-import 'package:albadael/Screens/Home.dart';
+import 'package:albadael/Screens/about.dart';
+import 'package:albadael/Screens/home.dart';
 import 'package:albadael/Screens/blog.dart';
 import 'package:albadael/Screens/protfloio.dart';
 import 'package:albadael/Screens/services.dart';
 import 'package:flutter/material.dart';
-
 import 'name_of_screen_in_drawer.dart';
 
 // ignore: camel_case_types

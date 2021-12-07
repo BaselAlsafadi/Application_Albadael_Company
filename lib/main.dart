@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:albadael/Screens/Home.dart';
+import 'Screens/splash_screen.dart';
 
 void main() => runApp(const MyApp());
 
@@ -15,10 +15,10 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'Fetch Data Example',
+        title: 'Albadael Company',
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: Home());
+        home: const SplashScreen());
   }
 }
