@@ -32,7 +32,7 @@ class AppBarHomePage extends StatelessWidget implements PreferredSizeWidget {
                 child: Image.asset('assets/images/logo.png')),
             Text(
               'Badael Online',
-              style: TextStyle(color: Colors.black),
+              style: TextStyle(color: Color(0xff1daad2)),
             ),
           ]),
         ),

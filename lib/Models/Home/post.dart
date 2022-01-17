@@ -1,6 +1,8 @@
 class Post {
   int id;
+  // ignore: non_constant_identifier_names
   int category_id;
+  // ignore: non_constant_identifier_names
   int author_id;
   bool? isactive;
   String slug;
@@ -8,14 +10,16 @@ class Post {
   int views;
   String status;
   String title;
-  String body;
+  String? body;
   String keyword;
   String metaDesc;
   String local;
 
   Post({
     required this.id,
+    // ignore: non_constant_identifier_names
     required this.category_id,
+    // ignore: non_constant_identifier_names
     required this.author_id,
     required this.isactive,
     required this.title,

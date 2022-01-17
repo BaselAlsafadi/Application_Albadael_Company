@@ -4,6 +4,7 @@ import 'package:carousel_slider/carousel_options.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
+// ignore: camel_case_types
 class Section_Bartner extends StatefulWidget {
   const Section_Bartner({Key? key}) : super(key: key);
 
@@ -54,24 +55,11 @@ class _Section_BartnerState extends State<Section_Bartner> {
                                         .toString()),
                                   ),
                                 )),
-
-                            // CircleAvatar(
-                            //   radius: 80,
-                            //   backgroundImage: getimage(snapshot
-                            //       .data!.data.partner[itemIndex].cover
-                            //       .toString()),
-                            // ),
                             SizedBox(
                               height: 10,
                             ),
                             Text(snapshot.data!.data.partner[itemIndex].name,
                                 style: TextStyle(fontWeight: FontWeight.bold)),
-                            // SizedBox(
-                            //   height: 10,
-                            // ),
-                            // Text(
-                            //   snapshot.data!.data.partner[itemIndex].link,
-                            // ),
                           ],
                         ),
                       ),

@@ -4,6 +4,7 @@ import 'package:carousel_slider/carousel_options.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
+// ignore: camel_case_types
 class Section_Team extends StatefulWidget {
   const Section_Team({Key? key}) : super(key: key);
 

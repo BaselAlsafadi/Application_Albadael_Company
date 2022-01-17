@@ -46,9 +46,9 @@ class Data {
       });
     }
 
-    if (json['lpost'] != null) {
+    if (json['post'] != null) {
       post = <Post>[];
-      json['lpost'].forEach((v) {
+      json['post'].forEach((v) {
         post.add(new Post.fromJson(v));
       });
     }
@@ -80,30 +80,39 @@ class Data {
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
+    // ignore: unnecessary_null_comparison
     if (this.about != null) {
       data['about'] = this.about.toJson();
     }
+    // ignore: unnecessary_null_comparison
     if (this.banner != null) {
       data['banner'] = this.banner.map((v) => v.toJson()).toList();
     }
+    // ignore: unnecessary_null_comparison
     if (this.general != null) {
       data['general'] = this.general.toJson();
     }
+    // ignore: unnecessary_null_comparison
     if (this.link != null) {
       data['link'] = this.link.map((v) => v.toJson()).toList();
     }
+    // ignore: unnecessary_null_comparison
     if (this.post != null) {
       data['post'] = this.post.map((v) => v.toJson()).toList();
     }
+    // ignore: unnecessary_null_comparison
     if (this.team != null) {
       data['team'] = this.team.map((v) => v.toJson()).toList();
     }
+    // ignore: unnecessary_null_comparison
     if (this.pcategories != null) {
       data['pcategories'] = this.pcategories.map((v) => v.toJson()).toList();
     }
+    // ignore: unnecessary_null_comparison
     if (this.portfolio != null) {
       data['portfolio'] = this.portfolio.map((v) => v.toJson()).toList();
     }
+    // ignore: unnecessary_null_comparison
     if (this.service != null) {
       data['service'] = this.service.map((v) => v.toJson()).toList();
     }

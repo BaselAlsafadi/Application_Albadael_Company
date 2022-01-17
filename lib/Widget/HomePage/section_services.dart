@@ -19,7 +19,6 @@ class _Section_ServicesState extends State<Section_Services> {
   @override
   void initState() {
     super.initState();
-    // data = readdata();
     apiCall = getdatapublic();
   }
 
@@ -49,22 +48,14 @@ class _Section_ServicesState extends State<Section_Services> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Container(
-                          height: 50,
-                          width: 50,
+                          height: 45,
+                          width: 45,
                           decoration: BoxDecoration(
                               image: DecorationImage(
                             image: getimage(snapshot
                                 .data!.data.service[index].icon
                                 .toString()),
                           )),
-
-                          // child: CircleAvatar(
-                          //   radius: 40,
-
-                          //   backgroundImage: getimage(snapshot
-                          //       .data!.data.service[index].icon
-                          //       .toString()),
-                          // ),
                         ),
                         Padding(
                           padding: EdgeInsets.only(

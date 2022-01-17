@@ -1,5 +1,6 @@
 class Portfolio {
   int id;
+  // ignore: non_constant_identifier_names
   int pcategory_id;
   bool? isactive;
   String slug;
@@ -14,6 +15,7 @@ class Portfolio {
 
   Portfolio({
     required this.id,
+    // ignore: non_constant_identifier_names
     required this.pcategory_id,
     required this.isactive,
     required this.slug,

@@ -43,9 +43,9 @@ class _Section_FaqState extends State<Section_Faq> {
                           child: InkWell(
                             onTap: () {
                               setState(() {
-                                snapshot.data!.data.faq[index].id == 1
+                                snapshot.data!.data.faq[index].id == 6
                                     ? visibile1 = !visibile1
-                                    : snapshot.data!.data.faq[index].id == 2
+                                    : snapshot.data!.data.faq[index].id == 7
                                         ? visibile2 = !visibile2
                                         : visibile2 = !visibile2;
                               });
@@ -69,7 +69,7 @@ class _Section_FaqState extends State<Section_Faq> {
                         Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Visibility(
-                              visible: snapshot.data!.data.faq[index].id == 1
+                              visible: snapshot.data!.data.faq[index].id == 6
                                   ? visibile1
                                   : visibile2,
                               child:

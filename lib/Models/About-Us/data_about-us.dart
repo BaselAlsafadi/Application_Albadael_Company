@@ -27,9 +27,11 @@ class Data {
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
 
+    // ignore: unnecessary_null_comparison
     if (this.faq != null) {
       data['faq'] = this.faq.map((v) => v.toJson()).toList();
     }
+    // ignore: unnecessary_null_comparison
     if (this.partner != null) {
       data['partner'] = this.partner.map((v) => v.toJson()).toList();
     }
