@@ -1,12 +1,12 @@
 class Service {
   int id;
+  bool? isactive;
   String icon;
   String title;
   String slug;
   String quote;
   String desc;
-  String createdAt;
-  String updatedAt;
+  String local;
 
   Service(
       {required this.id,
@@ -15,8 +15,8 @@ class Service {
       required this.slug,
       required this.quote,
       required this.desc,
-      required this.createdAt,
-      required this.updatedAt});
+      required this.local,
+      required this.isactive});
 
   factory Service.fromJson(Map<String, dynamic> json) {
     return Service(
@@ -26,8 +26,8 @@ class Service {
       slug: json['slug'],
       quote: json['quote'],
       desc: json['desc'],
-      createdAt: json['created_at'],
-      updatedAt: json['updated_at'],
+      local: json['local'],
+      isactive: json['is_active'],
     );
   }
 
@@ -39,8 +39,8 @@ class Service {
     data['slug'] = this.slug;
     data['quote'] = this.quote;
     data['desc'] = this.desc;
-    data['created_at'] = this.createdAt;
-    data['updated_at'] = this.updatedAt;
+    data['local'] = this.local;
+    data['is_active'] = this.isactive;
     return data;
   }
 }

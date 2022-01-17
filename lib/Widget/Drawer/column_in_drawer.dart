@@ -23,7 +23,7 @@ class _Column_DrawerState extends State<Column_Drawer> {
         Name_Screen_On_Drawer(
           icon: Icon(
             Icons.home,
-            color: Color(0xff2c4755),
+            color: Color(0xff1daad2),
           ),
           name: 'Home',
           navigator: () => Navigator.of(context)
@@ -32,7 +32,7 @@ class _Column_DrawerState extends State<Column_Drawer> {
         Name_Screen_On_Drawer(
           icon: Icon(
             Icons.amp_stories_rounded,
-            color: Color(0xff2c4755),
+            color: Color(0xff1daad2),
           ),
           name: 'About',
           navigator: () => Navigator.of(context)
@@ -41,7 +41,7 @@ class _Column_DrawerState extends State<Column_Drawer> {
         Name_Screen_On_Drawer(
             icon: Icon(
               Icons.space_dashboard_rounded,
-              color: Color(0xff2c4755),
+              color: Color(0xff1daad2),
             ),
             navigator: () => Navigator.of(context)
                 .push(MaterialPageRoute(builder: (context) => Srevices())),
@@ -49,7 +49,7 @@ class _Column_DrawerState extends State<Column_Drawer> {
         Name_Screen_On_Drawer(
           icon: Icon(
             Icons.work_rounded,
-            color: Color(0xff2c4755),
+            color: Color(0xff1daad2),
           ),
           navigator: () => Navigator.of(context)
               .push(MaterialPageRoute(builder: (context) => Protfolio())),
@@ -58,12 +58,20 @@ class _Column_DrawerState extends State<Column_Drawer> {
         Name_Screen_On_Drawer(
           icon: Icon(
             Icons.book_rounded,
-            color: Color(0xff2c4755),
+            color: Color(0xff1daad2),
           ),
           navigator: () => Navigator.of(context)
               .push(MaterialPageRoute(builder: (context) => Blog())),
           name: 'Blog',
-        )
+        ),
+        Name_Screen_On_Drawer(
+          icon: Icon(
+            Icons.settings,
+            color: Color(0xff1daad2),
+          ),
+          navigator: () {},
+          name: 'Setting',
+        ),
       ],
     );
   }

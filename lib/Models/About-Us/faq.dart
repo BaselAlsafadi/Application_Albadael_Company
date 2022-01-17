@@ -1,23 +1,25 @@
 class Faq {
-  late int id;
-  late String question;
-  late String answer;
-  late String createdAt;
-  late String updatedAt;
+  int id;
+  String question;
+  String answer;
+  bool? isactive;
+  String local;
 
   Faq(
       {required this.id,
       required this.question,
       required this.answer,
-      required this.createdAt,
-      required this.updatedAt});
+      required this.local,
+      required this.isactive});
 
-  Faq.fromJson(Map<String, dynamic> json) {
-    id = json['id'];
-    question = json['question'];
-    answer = json['answer'];
-    createdAt = json['created_at'];
-    updatedAt = json['updated_at'];
+  factory Faq.fromJson(Map<String, dynamic> json) {
+    return Faq(
+      id: json['id'],
+      question: json['question'],
+      answer: json['answer'],
+      local: json['local'],
+      isactive: json['is_active'],
+    );
   }
 
   Map<String, dynamic> toJson() {
@@ -25,8 +27,8 @@ class Faq {
     data['id'] = this.id;
     data['question'] = this.question;
     data['answer'] = this.answer;
-    data['created_at'] = this.createdAt;
-    data['updated_at'] = this.updatedAt;
+    data['is_active'] = this.isactive;
+    data['local'] = this.local;
     return data;
   }
 }

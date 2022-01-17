@@ -1,5 +1,6 @@
 class General {
   int id;
+  bool? isactive;
   String title;
   String favicon;
   String logo;
@@ -15,12 +16,11 @@ class General {
   String gmaps;
   String? tawkto;
   String? disqus;
-  String gverification;
+  String? gverification;
   String? sharethis;
   String keyword;
   String metaDesc;
-  String? createdAt;
-  String updatedAt;
+  String local;
 
   General(
       {required this.id,
@@ -43,34 +43,33 @@ class General {
       required this.sharethis,
       required this.keyword,
       required this.metaDesc,
-      required this.createdAt,
-      required this.updatedAt});
+      required this.local,
+      required this.isactive});
 
   factory General.fromJson(Map<String, dynamic> json) {
     return General(
-      id: json['id'],
-      title: json['title'],
-      favicon: json['favicon'],
-      logo: json['logo'],
-      address1: json['address1'],
-      address2: json['address2'],
-      phone: json['phone'],
-      email: json['email'],
-      twitter: json['twitter'],
-      facebook: json['facebook'],
-      instagram: json['instagram'],
-      linkedin: json['linkedin'],
-      footer: json['footer'],
-      gmaps: json['gmaps'],
-      tawkto: json['tawkto'],
-      disqus: json['disqus'],
-      gverification: json['gverification'],
-      sharethis: json['sharethis'],
-      keyword: json['keyword'],
-      metaDesc: json['meta_desc'],
-      createdAt: json['created_at'],
-      updatedAt: json['updated_at'],
-    );
+        id: json['id'],
+        title: json['title'],
+        favicon: json['favicon'],
+        logo: json['logo'],
+        address1: json['address1'],
+        address2: json['address2'],
+        phone: json['phone'],
+        email: json['email'],
+        twitter: json['twitter'],
+        facebook: json['facebook'],
+        instagram: json['instagram'],
+        linkedin: json['linkedin'],
+        footer: json['footer'],
+        gmaps: json['gmaps'],
+        tawkto: json['tawkto'],
+        disqus: json['disqus'],
+        gverification: json['gverification'],
+        sharethis: json['sharethis'],
+        keyword: json['keyword'],
+        metaDesc: json['meta_desc'],
+        local: json['local'],
+        isactive: json['is_active']);
   }
 
   Map<String, dynamic> toJson() {
@@ -95,8 +94,9 @@ class General {
     data['sharethis'] = this.sharethis;
     data['keyword'] = this.keyword;
     data['meta_desc'] = this.metaDesc;
-    data['created_at'] = this.createdAt;
-    data['updated_at'] = this.updatedAt;
+    data['local'] = this.local;
+    data['is_active'] = this.isactive;
+
     return data;
   }
 }

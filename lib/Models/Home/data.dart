@@ -1,9 +1,9 @@
+import 'package:albadael/Models/Home/team.dart';
 import 'about.dart';
 import 'banner.dart';
 import 'general.dart';
 import 'links.dart';
-import 'lpost.dart';
-import 'partner.dart';
+import 'post.dart';
 import 'pcategoraies.dart';
 import 'protofolio.dart';
 import 'services.dart';
@@ -13,8 +13,8 @@ class Data {
   late List<Banner> banner;
   late General general;
   late List<Link> link;
-  late List<Lpost> lpost;
-  late List<Partner> partner;
+  late List<Post> post;
+  late List<Team> team;
   late List<Pcategories> pcategories;
   late List<Portfolio> portfolio;
   late List<Service> service;
@@ -24,8 +24,8 @@ class Data {
       required this.banner,
       required this.general,
       required this.link,
-      required this.lpost,
-      required this.partner,
+      required this.post,
+      required this.team,
       required this.pcategories,
       required this.portfolio,
       required this.service});
@@ -47,15 +47,15 @@ class Data {
     }
 
     if (json['lpost'] != null) {
-      lpost = <Lpost>[];
+      post = <Post>[];
       json['lpost'].forEach((v) {
-        lpost.add(new Lpost.fromJson(v));
+        post.add(new Post.fromJson(v));
       });
     }
-    if (json['partner'] != null) {
-      partner = <Partner>[];
-      json['partner'].forEach((v) {
-        partner.add(new Partner.fromJson(v));
+    if (json['team'] != null) {
+      team = <Team>[];
+      json['team'].forEach((v) {
+        team.add(new Team.fromJson(v));
       });
     }
     if (json['pcategories'] != null) {
@@ -92,11 +92,11 @@ class Data {
     if (this.link != null) {
       data['link'] = this.link.map((v) => v.toJson()).toList();
     }
-    if (this.lpost != null) {
-      data['lpost'] = this.lpost.map((v) => v.toJson()).toList();
+    if (this.post != null) {
+      data['post'] = this.post.map((v) => v.toJson()).toList();
     }
-    if (this.partner != null) {
-      data['partner'] = this.partner.map((v) => v.toJson()).toList();
+    if (this.team != null) {
+      data['team'] = this.team.map((v) => v.toJson()).toList();
     }
     if (this.pcategories != null) {
       data['pcategories'] = this.pcategories.map((v) => v.toJson()).toList();

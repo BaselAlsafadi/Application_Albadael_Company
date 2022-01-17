@@ -47,8 +47,10 @@ class _Section_about_usState extends State<Section_about_us> {
                 ),
               ),
               ElevatedButton(
-                style:
-                    ElevatedButton.styleFrom(primary: const Color(0xff1abc9c)),
+                style: ElevatedButton.styleFrom(
+                  primary: const Color(0xff1daad2),
+                  // Color(0xff1abc9c)
+                ),
                 // ignore: sort_child_properties_last
                 child: const Text('Learn more'),
                 // child: const Text('Learn more'),
@@ -63,7 +65,11 @@ class _Section_about_usState extends State<Section_about_us> {
         } else if (snapshot.hasError) {
           return Text('${snapshot.error}');
         }
-        return const Center(child: CircularProgressIndicator());
+        return Center(
+            child: Container(
+          height: MediaQuery.of(context).size.height / 50,
+          width: MediaQuery.of(context).size.width / 4,
+        ));
       },
     );
   }

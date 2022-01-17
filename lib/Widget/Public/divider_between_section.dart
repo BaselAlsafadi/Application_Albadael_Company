@@ -11,31 +11,37 @@ class Divider_between_section extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.only(right: 8, left: 8, top: 14, bottom: 14),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Expanded(
             child: Container(
               child: Divider(
-                  thickness: 1,
-                  endIndent: 10,
-                  indent: 35,
-                  color: Color(0xff2c4755)),
+                thickness: 1,
+                endIndent: 10,
+                indent: 35,
+                color: Color(0xff1daad2),
+                // Color(0xff2c4755)
+              ),
             ),
           ),
           Text(
             name,
             style: TextStyle(
-                fontWeight: FontWeight.bold, color: Color(0xff2c4755)),
+              fontWeight: FontWeight.bold,
+              color: Color(0xff1daad2),
+            ),
           ),
           Expanded(
             child: Container(
               child: Divider(
-                  thickness: 1,
-                  endIndent: 35,
-                  indent: 10,
-                  color: Color(0xff2c4755)),
+                thickness: 1,
+                endIndent: 35,
+                indent: 10,
+                color: Color(0xff1daad2),
+                //  Color(0xff2c4755)
+              ),
             ),
           ),
         ],

@@ -31,41 +31,50 @@ class _Section_ServicesState extends State<Section_Services> {
         if (snapshot.hasData) {
           return Padding(
             padding: const EdgeInsets.all(8.0),
-            child: new ListView.builder(
+            child: new GridView.builder(
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2),
                 physics: NeverScrollableScrollPhysics(),
                 primary: false,
                 shrinkWrap: true,
                 itemCount: snapshot.data!.data.service.length,
                 itemBuilder: (context, index) {
                   return Card(
-                    margin: EdgeInsets.all(5),
-                    child: ListTile(
-                      leading: Icon(
-                        snapshot.data!.data.service[index].id == 5
-                            ? Icons.laptop
-                            : snapshot.data!.data.service[index].id == 2
-                                ? Icons.design_services
-                                : snapshot.data!.data.service[index].id == 3
-                                    ? Icons.web
-                                    : snapshot.data!.data.service[index].id == 4
-                                        ? Icons.mobile_friendly
-                                        : snapshot.data!.data.service[index]
-                                                    .id ==
-                                                1
-                                            ? Icons.image
-                                            : snapshot.data!.data.service[index]
-                                                        .id ==
-                                                    6
-                                                ? Icons.mobile_friendly
-                                                : Icons.app_blocking,
-                        color: Color(0xff1abc9c),
-                      ),
-                      title: Text(
-                        snapshot.data!.data.service[index].title,
-                        style: TextStyle(color: Color(0xff2c4755)),
-                      ),
-                      // subtitle:
-                      //     Text(snapshot.data!.data.service[index].quote),
+                    elevation: 4,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    margin: EdgeInsets.all(8.0),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                          height: 50,
+                          width: 50,
+                          decoration: BoxDecoration(
+                              image: DecorationImage(
+                            image: getimage(snapshot
+                                .data!.data.service[index].icon
+                                .toString()),
+                          )),
+
+                          // child: CircleAvatar(
+                          //   radius: 40,
+
+                          //   backgroundImage: getimage(snapshot
+                          //       .data!.data.service[index].icon
+                          //       .toString()),
+                          // ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(
+                              top: MediaQuery.of(context).size.height / 30),
+                          child: Text(
+                            snapshot.data!.data.service[index].title,
+                            style: TextStyle(color: Color(0xff2c4755)),
+                          ),
+                        ),
+                      ],
                     ),
                   );
                 }),
@@ -73,7 +82,11 @@ class _Section_ServicesState extends State<Section_Services> {
         } else if (snapshot.hasError) {
           return Text('${snapshot.error}');
         }
-        return Center(child: CircularProgressIndicator());
+        return Center(
+            child: Container(
+          height: MediaQuery.of(context).size.height / 50,
+          width: MediaQuery.of(context).size.width / 4,
+        ));
       },
     );
   }

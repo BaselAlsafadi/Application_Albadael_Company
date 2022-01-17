@@ -2,23 +2,23 @@ class Link {
   int id;
   String name;
   String link;
-  String createdAt;
-  String updatedAt;
+  bool? isactive;
+  String local;
 
   Link(
       {required this.id,
       required this.name,
       required this.link,
-      required this.createdAt,
-      required this.updatedAt});
+      required this.isactive,
+      required this.local});
 
   factory Link.fromJson(Map<String, dynamic> json) {
     return Link(
       id: json['id'],
       name: json['name'],
       link: json['link'],
-      createdAt: json['created_at'],
-      updatedAt: json['updated_at'],
+      isactive: json['is_active'],
+      local: json['local'],
     );
   }
 
@@ -27,8 +27,8 @@ class Link {
     data['id'] = this.id;
     data['name'] = this.name;
     data['link'] = this.link;
-    data['created_at'] = this.createdAt;
-    data['updated_at'] = this.updatedAt;
+    data['is_active'] = this.isactive;
+    data['local'] = this.local;
     return data;
   }
 }

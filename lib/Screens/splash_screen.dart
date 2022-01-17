@@ -12,7 +12,7 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
   stratTimer() {
-    Timer(Duration(seconds: 4), () {
+    Timer(Duration(seconds: 5), () {
       Navigator.of(context).pushReplacement(
         MaterialPageRoute<void>(builder: (BuildContext context) {
           return Home();
@@ -31,41 +31,56 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        height: MediaQuery.of(context).size.height,
         color: Colors.white,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Container(
-              width: 200,
-              child: Hero(
-                transitionOnUserGestures: true,
-                tag: 'assets/images/logo.png',
-                child: Material(
-                  color: Colors.transparent,
-                  child: Image.asset(
-                    'assets/images/logo.png',
-                    fit: BoxFit.contain,
+        height: MediaQuery.of(context).size.height,
+        width: MediaQuery.of(context).size.width,
+        child: Stack(children: [
+          Container(
+            child: Image.asset(
+              'assets/images/dd.jpeg',
+            ),
+          ),
+          Positioned(
+            bottom: MediaQuery.of(context).size.height / 13,
+            left: MediaQuery.of(context).size.width / 7,
+            child: Container(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    width: 90,
+                    child: Hero(
+                      transitionOnUserGestures: true,
+                      tag: 'assets/images/logo.png',
+                      child: Material(
+                        color: Colors.transparent,
+                        child: Image.asset(
+                          'assets/images/logo.png',
+                          fit: BoxFit.contain,
+                        ),
+                      ),
+                    ),
                   ),
-                ),
+                  Container(
+                    width: 170,
+                    child: TextLiquidFill(
+                      textAlign: TextAlign.center,
+                      text: 'Badael Online ',
+                      waveColor: Color(0xff1daad2),
+                      boxBackgroundColor: Colors.white,
+                      textStyle: TextStyle(
+                        fontSize: 25.0,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      boxHeight: 50.0,
+                      loadDuration: Duration(seconds: 4),
+                    ),
+                  ),
+                ],
               ),
             ),
-            Center(
-              child: TextLiquidFill(
-                textAlign: TextAlign.center,
-                text: 'Badael Online',
-                waveColor: Color(0xff1daad2),
-                boxBackgroundColor: Colors.white,
-                textStyle: TextStyle(
-                  fontSize: 25.0,
-                  fontWeight: FontWeight.bold,
-                ),
-                boxHeight: 50.0,
-                loadDuration: Duration(seconds: 3),
-              ),
-            ),
-          ],
-        ),
+          ),
+        ]),
       ),
     );
   }

@@ -1,11 +1,11 @@
 class Banner {
   int id;
   String cover;
-  String title;
-  String desc;
-  String link;
-  String createdAt;
-  String updatedAt;
+  String? title;
+  String? desc;
+  String? link;
+  String local;
+  bool? isactive;
 
   Banner(
       {required this.id,
@@ -13,8 +13,8 @@ class Banner {
       required this.title,
       required this.desc,
       required this.link,
-      required this.createdAt,
-      required this.updatedAt});
+      required this.isactive,
+      required this.local});
 
   factory Banner.fromJson(Map<String, dynamic> json) {
     return Banner(
@@ -23,8 +23,8 @@ class Banner {
       title: json['title'],
       desc: json['desc'],
       link: json['link'],
-      createdAt: json['created_at'],
-      updatedAt: json['updated_at'],
+      isactive: json['is_active'],
+      local: json['local'],
     );
   }
 
@@ -35,8 +35,8 @@ class Banner {
     data['title'] = this.title;
     data['desc'] = this.desc;
     data['link'] = this.link;
-    data['created_at'] = this.createdAt;
-    data['updated_at'] = this.updatedAt;
+    data['is_active'] = this.isactive;
+    data['local'] = this.local;
     return data;
   }
 }

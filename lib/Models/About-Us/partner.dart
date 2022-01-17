@@ -3,16 +3,16 @@ class Partner {
   String cover;
   String name;
   String link;
-  String createdAt;
-  String updatedAt;
+  bool? isactive;
+  String local;
 
   Partner(
       {required this.id,
       required this.cover,
       required this.name,
       required this.link,
-      required this.createdAt,
-      required this.updatedAt});
+      required this.local,
+      required this.isactive});
 
   factory Partner.fromJson(Map<String, dynamic> json) {
     return Partner(
@@ -20,8 +20,8 @@ class Partner {
       cover: json['cover'],
       name: json['name'],
       link: json['link'].toString(),
-      createdAt: json['created_at'],
-      updatedAt: json['updated_at'],
+      isactive: json['is_active'],
+      local: json['local'],
     );
   }
 
@@ -31,8 +31,8 @@ class Partner {
     data['cover'] = this.cover;
     data['name'] = this.name;
     data['link'] = this.link;
-    data['created_at'] = this.createdAt;
-    data['updated_at'] = this.updatedAt;
+    data['local'] = this.local;
+    data['is_active'] = this.isactive;
     return data;
   }
 }

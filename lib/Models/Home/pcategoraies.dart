@@ -1,21 +1,21 @@
 class Pcategories {
   int id;
   String name;
-  String createdAt;
-  String updatedAt;
+  bool? isactive;
+  String local;
 
   Pcategories(
       {required this.id,
       required this.name,
-      required this.createdAt,
-      required this.updatedAt});
+      required this.local,
+      required this.isactive});
 
   factory Pcategories.fromJson(Map<String, dynamic> json) {
     return Pcategories(
       id: json['id'],
       name: json['name'],
-      createdAt: json['created_at'],
-      updatedAt: json['updated_at'],
+      isactive: json['is_active'],
+      local: json['local'],
     );
   }
 
@@ -23,8 +23,8 @@ class Pcategories {
     final Map<String, dynamic> data = new Map<String, dynamic>();
     data['id'] = this.id;
     data['name'] = this.name;
-    data['created_at'] = this.createdAt;
-    data['updated_at'] = this.updatedAt;
+    data['is_active'] = this.isactive;
+    data['local'] = this.local;
     return data;
   }
 }
