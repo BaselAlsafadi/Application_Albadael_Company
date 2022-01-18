@@ -57,7 +57,18 @@ class _Section_BlogState extends State<Section_Blog> {
                           ),
                           Padding(
                             padding: const EdgeInsets.only(left: 15),
-                            child: Text(snapshot.data!.data.post[index].title),
+                            child: Column(
+                              children: [
+                                Text(
+                                  snapshot.data!.data.post[index].title,
+                                  style: TextStyle(fontWeight: FontWeight.bold),
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Text('Read more ...')
+                              ],
+                            ),
                           )
                         ],
                       ),

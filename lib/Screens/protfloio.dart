@@ -18,7 +18,6 @@ class _ProtfolioState extends State<Protfolio> {
   @override
   void initState() {
     super.initState();
-    // data = readdata();
     apiCall = getdatapublic();
   }
 
